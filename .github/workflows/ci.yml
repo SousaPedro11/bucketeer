@@ -1,6 +1,19 @@
 name: golangci
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - "**.go"
+      - "**.mod"
+      - "**.sum"
+      - ".github/workflows/ci.yml"
+
+  pull_request:
+    paths:
+      - "**.go"
+      - "**.mod"
+      - "**.sum"
+      - ".github/workflows/ci.yml"
 
 permissions:
   contents: read
